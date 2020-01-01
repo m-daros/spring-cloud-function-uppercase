@@ -12,7 +12,11 @@ public class UppercaseFunctionApplication {
 	@Bean
 	public Function<String, String> uppercase () {
 
-		return value -> value.toUpperCase ();
+		return value -> {
+
+			System.out.println ( "uppercase ( " + value + " )" );
+			return value.toUpperCase ();
+		};
 	}
 
 	public static void main ( String [] args ) {
